@@ -1,0 +1,29 @@
+Enter file contents here
+#  Script Name is  run_analysis.R 
+> If(!file.exists(“./data”)) {dir.create(“./data”)}
+# create files to load data sets
+> download.file (destfile="~/UCI HAR Dataset/test/X_test.txt", quote="\"")
+> X_test <- read.table("~/UCI HAR Dataset/test/X_test.txt", quote="\"")
+>   View(X_test)
+> download.file (destfile="~/ UCI HAR Dataset/test/y_test.txt", quote="\"")
+> y_test <- read.table("~/UCI HAR Dataset/test/y_test.txt", quote="\"")
+>   View(y_test)
+> Download.file(destfile=("~/UCI HAR Dataset/train/X_train.txt", quote=”\””)
+> X_train <- read.table("~/UCI HAR Dataset/train/X_train.txt", quote="\"")
+>   View(X_train)
+> Download.file(destfile=("~/ UCI HAR Dataset/train/y_train.txt", quote="\"")
+> y_train <- read.table("~/UCI HAR Dataset/train/y_train.txt", quote="\"")
+>   View(y_train)
+# merge data sets x_test and train.txt)
+>  mergeData= merge(X_test, X_train,by.x=test, by.y=train, all=TRUE) 
+> Head(mergeData)
+ # extracts measures on the mean 
+> sum(mergeData)
+# extracts measure standard deviation
+> sd(mergeData) 
+# creates a second, tidy data set.
+>  secondSet  <-  read.table(("~/UCI HAR Dataset/train/y_train.txt", quote="\"")
+# extract average for each variable in secondSet for each activity
+ppois(16, lambda=12)   # lower tail 
+# extract average for each subject
+> ppois(16, lambda=12, lower=FALSE)   # upper tail
